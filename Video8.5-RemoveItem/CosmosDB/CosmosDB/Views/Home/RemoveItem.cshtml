@@ -1,0 +1,18 @@
+﻿@model CosmosDB.Models.Curso
+
+@{
+	ViewData["Title"] = "Remove Item";
+}
+
+<h3>Tem certeza que deseja remover o curso: @Model.descricao ?</h3>
+<div>
+
+	<form asp-action="RemoveItem">
+		<input type="hidden" asp-for="id" />
+		<input type="hidden" asp-for="categoria" />
+
+		<input type="submit" value="Sim, remover" class="btn btn-danger" /> |
+		<a asp-action="ListAllItems">Não, retornar para a lista</a>
+	</form>
+</div>
+
